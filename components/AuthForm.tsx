@@ -127,7 +127,13 @@ const AuthForm = ({ type }:{ type:FormType }) => {
                             type="password"
                         />
 
-
+                        {/*<FormField*/}
+                        {/*    control={form.control}*/}
+                        {/*    name="password"*/}
+                        {/*    label="Password"*/}
+                        {/*    placeholder="Enter your password"*/}
+                        {/*    type="radio"*/}
+                        {/*/>*/}
 
                         <Button className="btn" type="submit">
                             {isSignIn ? "Sign In" : "Create an Account"}
