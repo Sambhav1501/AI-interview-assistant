@@ -13,6 +13,17 @@ import Link from "next/link";
 import {toast} from "sonner";
 import FormField from "@/components/FormField";
 import {useRouter} from "next/navigation";
+import {auth} from "@/firebase/client";
+
+////////////////////////////
+
+import {
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
+} from "firebase/auth";
+import { signIn, signUp } from "@/lib/actions/auth.action";
+
+///////////////////////////
 
 
 const authFormSchema = (type: FormType) => {
@@ -23,41 +34,71 @@ const authFormSchema = (type: FormType) => {
     });
 };
 
-const AuthForm = ({ type }:{ type:FormType }) => {
-
-    const router=useRouter();
+const AuthForm = ({ type }: { type: FormType }) => {
+    const router = useRouter();
 
     const formSchema = authFormSchema(type);
-
-    // form copied from shadcn react form
-    // define the form
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: {
             name: "",
             email: "",
-            password: ""
+            password: "",
         },
-    })
-    // define the submit handler
-    function onSubmit(values: z.infer<typeof formSchema>) {
+    });
+
+    const onSubmit = async (data: z.infer<typeof formSchema>) => {
         try {
-            if(type === "sign-up") {
+            if (type === "sign-up") {
+                const { name, email, password } = data;
+
+                const userCredential = await createUserWithEmailAndPassword(
+                    auth,
+                    email,
+                    password
+                );
+
+                const result = await signUp({
+                    uid: userCredential.user.uid,
+                    name: name!,
+                    email,
+                    password,
+                });
+
+                if (!result.success) {
+                    toast.error(result.message);
+                    return;
+                }
+
                 toast.success("Account created successfully. Please sign in.");
                 router.push("/sign-in");
-                // console.log('SIGN UP', values);
-            }
-            else {
-                toast.success("Sign in successfully. ");
+            } else {
+                const { email, password } = data;
+
+                const userCredential = await signInWithEmailAndPassword(
+                    auth,
+                    email,
+                    password);
+
+                const idToken = await userCredential.user.getIdToken();
+                if (!idToken) {
+                    toast.error("Sign in Failed. Please try again.");
+                    return;
+                }
+
+                await signIn({
+                    email,
+                    idToken,
+                });
+
+                toast.success("Signed in successfully.");
                 router.push("/");
-                // console.log('SIGN IN', values);
             }
-        }
-        catch (error) {
+        } catch (error) {
             console.log(error);
             toast.error(`There was an error: ${error}`);
         }
-    }
+    };
 
     // end of form copied from shadcn react form
     // return (
