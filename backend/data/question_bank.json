@@ -1,0 +1,102 @@
+{
+  "technical": {
+    "easy": [
+      "What is the difference between a list and a tuple in Python?",
+      "Explain what a REST API is.",
+      "What is the purpose of version control systems like Git?",
+      "What is the difference between HTTP and HTTPS?",
+      "Explain what a database index is."
+    ],
+    "medium": [
+      "How would you implement a caching mechanism in a web application?",
+      "Explain the concept of Object-Oriented Programming and its key principles.",
+      "What are the differences between SQL and NoSQL databases?",
+      "How does garbage collection work in programming languages?",
+      "Describe the MVC architecture pattern.",
+      "What is the difference between authentication and authorization?",
+      "Explain how you would optimize a slow database query.",
+      "What are microservices and what are their advantages?"
+    ],
+    "hard": [
+      "Design a URL shortening service like bit.ly. What are the key considerations?",
+      "How would you design a distributed caching system?",
+      "Explain the CAP theorem and its implications for distributed systems.",
+      "How would you implement a rate limiter for an API?",
+      "Design a notification system that can handle millions of users.",
+      "What strategies would you use to handle database scaling?",
+      "Explain how you would implement real-time search functionality.",
+      "How would you design a social media feed ranking algorithm?",
+      "Describe how you would build a fault-tolerant messaging queue.",
+      "What are the trade-offs between consistency and availability?",
+      "How would you implement a distributed locking mechanism?",
+      "Design a system to detect anomalies in real-time streaming data."
+    ],
+    "expert": [
+      "Design a globally distributed database that ensures consistency across regions.",
+      "How would you architect a system to handle 10 million concurrent WebSocket connections?",
+      "Explain how you would build a real-time collaborative editing system like Google Docs.",
+      "Design a recommendation engine that can process billions of user interactions.",
+      "How would you implement a distributed transaction system across multiple databases?",
+      "Architect a video streaming platform that can handle millions of concurrent viewers.",
+      "Design a fraud detection system for real-time financial transactions.",
+      "How would you build a search engine from scratch?",
+      "Explain your approach to designing a distributed file storage system like Dropbox.",
+      "Design a machine learning pipeline for real-time predictions at scale.",
+      "How would you architect a multi-tenant SaaS platform with data isolation?",
+      "Design a real-time analytics system processing terabytes of data daily.",
+      "How would you implement a distributed consensus algorithm?",
+      "Design a global CDN with edge computing capabilities.",
+      "Architect a system for real-time language translation at scale."
+    ]
+  },
+  "behavioral": {
+    "easy": [
+      "Tell me about yourself.",
+      "Why are you interested in this position?",
+      "What are your greatest strengths?",
+      "Where do you see yourself in 5 years?",
+      "Why should we hire you?"
+    ],
+    "medium": [
+      "Tell me about a time when you had to work with a difficult team member.",
+      "Describe a situation where you had to meet a tight deadline.",
+      "Give me an example of a time you showed leadership.",
+      "Tell me about a time you failed and what you learned from it.",
+      "Describe a situation where you had to learn something new quickly.",
+      "Tell me about a conflict you had at work and how you resolved it.",
+      "Give me an example of when you went above and beyond.",
+      "Describe a time when you had to make a difficult decision."
+    ],
+    "hard": [
+      "Tell me about a time when you had to influence others without formal authority.",
+      "Describe a situation where you had to balance multiple conflicting priorities.",
+      "Give me an example of when you had to disagree with your manager's decision.",
+      "Tell me about a time when you had to deliver bad news to stakeholders.",
+      "Describe a situation where you identified and solved a problem proactively.",
+      "Tell me about a time when you had to manage a underperforming team member.",
+      "Give me an example of when you had to navigate office politics.",
+      "Describe how you handled a situation where you made a significant mistake.",
+      "Tell me about a time when you had to drive change in a resistant organization.",
+      "Give me an example of when you had to make a decision with incomplete information.",
+      "Describe a situation where you had to mentor or coach someone.",
+      "Tell me about the most challenging project you've managed."
+    ],
+    "expert": [
+      "Describe your approach to building and scaling high-performing engineering teams.",
+      "Tell me about a time when you had to make a strategic decision that affected the company's direction.",
+      "How have you handled situations where you had to balance technical debt with feature delivery?",
+      "Describe your experience driving organizational change across multiple teams.",
+      "Tell me about a time when you had to resolve a major conflict between departments.",
+      "How do you approach building engineering culture in a rapidly growing company?",
+      "Describe a situation where you had to make trade-offs between short-term and long-term goals.",
+      "Tell me about your experience with crisis management and incident response.",
+      "How have you balanced innovation with maintaining stable production systems?",
+      "Describe your approach to setting technical strategy and roadmaps.",
+      "Tell me about a time when you had to defend a technical decision to non-technical executives.",
+      "How do you approach talent development and succession planning?",
+      "Describe your experience managing distributed or remote teams.",
+      "Tell me about a time when you had to make a decision that was unpopular but necessary.",
+      "How do you approach vendor selection and build vs. buy decisions?"
+    ]
+  }
+}
